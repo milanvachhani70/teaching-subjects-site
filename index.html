@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Milan Vachhani Teaching Hub</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">GitHub Pages Teaching Website</p>
+        <h1>Subject Hub For Interactive Teaching Slides</h1>
+        <p class="hero-text">
+          One website for all your subjects. Each subject can contain its own HTML slide deck, and every deck opens inside this site.
+        </p>
+        <div class="hero-actions">
+          <button class="primary-btn" id="openFirstSubject" type="button">Open First Subject</button>
+          <a class="secondary-btn" href="#how-to-add">How To Add More Subjects</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="panel-label">Current setup</div>
+        <ul class="hero-list">
+          <li>GitHub Pages ready static site</li>
+          <li>Subject cards generated from a simple manifest file</li>
+          <li>In-page viewer with fullscreen support</li>
+          <li>First subject already added: MEM23007 Calculus</li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="library">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Subject Library</p>
+            <h2>Available Subjects</h2>
+          </div>
+          <p class="section-note">Add more subjects later by dropping in a new HTML folder and updating one manifest entry.</p>
+        </div>
+        <div id="subjectGrid" class="subject-grid"></div>
+      </section>
+
+      <section class="viewer">
+        <div class="viewer-head">
+          <div>
+            <p class="section-kicker">Viewer</p>
+            <h2 id="viewerTitle">Select a subject</h2>
+          </div>
+          <div class="viewer-actions">
+            <button class="secondary-btn small" id="openSubjectTab" type="button" disabled>Open In New Tab</button>
+            <button class="primary-btn small" id="fullscreenViewer" type="button" disabled>Full Screen Viewer</button>
+          </div>
+        </div>
+        <p id="viewerDescription" class="viewer-description">
+          Choose a subject card to open the HTML file inside this website.
+        </p>
+        <div class="viewer-frame-shell" id="viewerShell">
+          <div class="viewer-placeholder" id="viewerPlaceholder">
+            <div class="placeholder-card">
+              <h3>Your subjects will open here</h3>
+              <p>The selected HTML deck is shown inside an embedded viewer so students stay in one website.</p>
+            </div>
+          </div>
+          <iframe id="subjectFrame" class="subject-frame" title="Subject viewer"></iframe>
+        </div>
+      </section>
+    </main>
+
+    <section class="guide" id="how-to-add">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Maintenance</p>
+          <h2>How To Add A New Subject Later</h2>
+        </div>
+      </div>
+      <div class="guide-grid">
+        <article class="guide-card">
+          <span class="step-pill">1</span>
+          <h3>Create a new folder</h3>
+          <p>Add a folder inside <code>subjects/</code>, for example <code>subjects/physics101/</code>.</p>
+        </article>
+        <article class="guide-card">
+          <span class="step-pill">2</span>
+          <h3>Place the HTML file inside it</h3>
+          <p>Keep the subject deck as <code>index.html</code> inside that folder, along with any images, CSS, or assets it needs.</p>
+        </article>
+        <article class="guide-card">
+          <span class="step-pill">3</span>
+          <h3>Update one manifest entry</h3>
+          <p>Add one object in <code>subjects/manifest.js</code> with title, description, and the subject path.</p>
+        </article>
+        <article class="guide-card">
+          <span class="step-pill">4</span>
+          <h3>Push to GitHub</h3>
+          <p>Once pushed to GitHub Pages, the new subject automatically appears on the homepage.</p>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <script src="./subjects/manifest.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
