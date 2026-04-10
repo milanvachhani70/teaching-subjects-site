@@ -9,16 +9,5 @@ window.SUBJECTS = [
     level: "Assessment-focused unit",
     slideCount: 89,
     entry: "./subjects/mem23007/index.html"
-  },
-  {
-    id: "msl924003-laboratory-skills",
-    code: "MSL924003",
-    title: "Laboratory Data And Technical Skills",
-    description: "Interactive 100-slide HTML subject rebuilt from the supplied laboratory skills PDF, with extracted notes and slide visuals for browser-based teaching.",
-    category: "Laboratory Skills",
-    classes: "100-slide self-paced or teacher-led deck",
-    level: "Technical skills subject",
-    slideCount: 100,
-    entry: "./subjects/msl924003/index.html"
   }
 ];
